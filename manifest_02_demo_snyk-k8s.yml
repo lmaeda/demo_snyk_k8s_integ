@@ -1,0 +1,45 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-snyk
+spec:
+  ports:
+      - name: 80-tcp
+        port: 80
+        protocol: TCP
+        targetPort: 80
+  selector:
+        com.docker.project: demo-snyk
+  type: LoadBalancer
+status:
+  loadBalancer: {}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+        com.docker.project: demo-snyk
+  name: demo-snyk
+spec:
+  replicas: 1
+  selector:
+        matchLabels:
+          com.docker.project: demo-snyk
+  strategy:
+        type: Recreate
+  template:
+        metadata:
+          labels:
+            com.docker.project: demo-snyk
+        spec:
+          containers:
+            - image: lucmaeda/getting-started
+              name: demo-snyk
+              ports:
+                - containerPort: 80
+                  protocol: TCP
+              resources: {}
+          restartPolicy: Always
+status: {}
