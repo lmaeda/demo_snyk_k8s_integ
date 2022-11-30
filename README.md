@@ -1,6 +1,11 @@
 # demo_snyk_k8s_integ
 Files for demo of snyk K8s integration, using DockerDesktop
-(preparation of auto import/delete of projects were not successfuly with k8s of DockerDesktop.)
+
+Preparation of auto import/delete of projects were not successfuly with k8s of DockerDesktop.
+
+For references,
+- [Automatic import/deletion of Kubernetes workloads projects](https://docs.snyk.io/products/snyk-container/kubernetes-workload-and-image-scanning/kubernetes-integration-features/automatic-import-deletion-of-kubernetes-workloads-projects)
+- [Advanced use of automatic import/deletion](https://docs.snyk.io/products/snyk-container/kubernetes-workload-and-image-scanning/kubernetes-integration-features/automatic-import-deletion-of-kubernetes-workloads-projects/advanced-use-of-automatic-import-deletion#using-more-than-one-org)
 
 ## Requirements
 - DockerDesktop
