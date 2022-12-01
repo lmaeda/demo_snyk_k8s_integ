@@ -82,7 +82,7 @@ namespace/snyk-monitor created
 ```
 √ % kubectl create secret generic snyk-monitor -n snyk-monitor \
         --from-literal=dockercfg.json={} \
-        --from-literal=integrationId=d0138106-2e76-4174-980b-e31daac65cc6
+        --from-literal=integrationId=d0138106-2e76-4174-980b-xxxxxxxxx
 secret/snyk-monitor created
 ```
 4. Either compile or make use of prepared workloads-events policyfiles, and map the file when ready.
